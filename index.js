@@ -48,22 +48,22 @@ app.post("/", (req, res) => {
         // converting into webp
 
 
-//         imagemin(["./"+upload_path+
-//         path.extname(sampleFile.name)], {
-//             destination: "./uploads/webp/",
-//             plugins: [
-//               imageminWebp({
-//                   quality: 80
-//                 //   ,
-//                 //   resize: {
-//                 //     width: 1000,
-//                 //     height: 0
-//                 //   }
-//               }),
-//             ],
-//           }).then(() => {
-//             console.log("Images Converted Successfully!!!");
-//           }).catch((err)=>console.log(err));
+        imagemin(["./"+upload_path+
+        path.extname(sampleFile.name)], {
+            destination: "./uploads/webp/",
+            plugins: [
+              imageminWebp({
+                  quality: 80
+                //   ,
+                //   resize: {
+                //     width: 1000,
+                //     height: 0
+                //   }
+              }),
+            ],
+          }).then(() => {
+            console.log("Images Converted Successfully!!!");
+          }).catch((err)=>console.log(err));
 
 
       return res.send({
